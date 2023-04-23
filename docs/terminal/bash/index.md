@@ -4,7 +4,6 @@ title: BASH Commands
 grand_parent: Terminal
 parent: bash
 nav_order: 1
-has_children: true
 ---
 
 ```
