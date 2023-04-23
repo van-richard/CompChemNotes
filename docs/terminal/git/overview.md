@@ -1,10 +1,11 @@
----
+------
 layout: default
-title: Git Commands
-grand_parent: Terminal
-parent: Git
-nav_order: 1
+title: Git 
+parent: Terminal
+nav_order: 2
+has_children: true
 ---
+
 
 
 ```
