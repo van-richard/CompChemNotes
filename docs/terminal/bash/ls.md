@@ -2,7 +2,8 @@
 layout: default
 title: ls
 grand_parent: Terminal
-parent: BASH Commands
+parent: Bash
+nav_order: 2
 ---
 
 ```
