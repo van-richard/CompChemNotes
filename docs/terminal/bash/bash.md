@@ -1,8 +1,8 @@
 ---
 layout: default
 title: BASH
-parent: Terminal
-grand_parent: Home
+grand_parent: Terminal
+parent: BASH
 nav_order: 1
 ---
 
