@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Git 
-parent: Terminal
+title: Git Commands
+grand_parent: Terminal
+parent: Git
 nav_order: 2
 ---
 

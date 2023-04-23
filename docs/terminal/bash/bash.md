@@ -1,6 +1,6 @@
 ---
 layout: default
-title: BASH
+title: BASH Commands
 grand_parent: Terminal
 parent: BASH
 nav_order: 1
