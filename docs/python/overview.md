@@ -7,8 +7,6 @@ nav_order: 1
 ---
 
 ```
-
-
 # Single line comments start with a number symbol.
 
 """ Multiline strings can be written
