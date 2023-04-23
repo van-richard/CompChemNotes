@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Overview
-grand_parent: Terminal
 parent: Python
 nav_order: 1
 ---
