@@ -1,11 +1,11 @@
 ---
 layout: default
-title: BASH
+title: Git 
 parent: Terminal
-nav_order: 1
+nav_order: 2
 ---
 
 
 ```
-ls
+git 
 ```
