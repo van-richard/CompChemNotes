@@ -3,9 +3,10 @@ layout: default
 title: ls
 grand_parent: Terminal
 parent: BASH
-nav_order: 2
 ---
 
+# List files in a directory with options
+
 ```
-ls
+ls [flags] [directory]
 ```
