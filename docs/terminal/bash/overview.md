@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Overview
-grand_parent: Terminal
-parent: BASH
-nav_order: 1
+title: BASH 
+parent: Terminal
+# nav_order: 1
+has_children: true
 ---
 
 ```
