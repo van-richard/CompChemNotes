@@ -1,6 +1,6 @@
 ---
 layout: default
-title: terminal
+title: Terminal
 nav_order: 2
 has_children: true
 ---
