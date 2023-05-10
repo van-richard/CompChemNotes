@@ -343,54 +343,85 @@ li[::-1]  # Return list in reverse order => [3, 4, 2, 1]
 # li[start:end:step]
 ```
 
-# Make a one layer deep copy using slices
+Make a one layer deep copy using slices
+
+```
 li2 = li[:]  # => li2 = [1, 2, 4, 3] but (li2 is li) will result in false.
+```
 
-# Remove arbitrary elements from a list with "del"
+Remove arbitrary elements from a list with "del"
+
+```
 del li[2]  # li is now [1, 2, 3]
+```
 
-# Remove first occurrence of a value
+Remove first occurrence of a value
+
+```
 li.remove(2)  # li is now [1, 3]
 li.remove(2)  # Raises a ValueError as 2 is not in the list
+```
 
-# Insert an element at a specific index
+Insert an element at a specific index
+
+```
 li.insert(1, 2)  # li is now [1, 2, 3] again
+```
 
-# Get the index of the first item found matching the argument
+Get the index of the first item found matching the argument
+
+```
 li.index(2)  # => 1
 li.index(4)  # Raises a ValueError as 4 is not in the list
+```
 
-# You can add lists
-# Note: values for li and for other_li are not modified.
+You can add lists. Note: values for li and for other_li are not modified.
+
+```
 li + other_li  # => [1, 2, 3, 4, 5, 6]
+```
 
-# Concatenate lists with "extend()"
+Concatenate lists with "extend()"
+
+```
 li.extend(other_li)  # Now li is [1, 2, 3, 4, 5, 6]
+```
 
-# Check for existence in a list with "in"
+Check for existence in a list with "in"
+
+```
 1 in li  # => True
+```
 
-# Examine the length with "len()"
+Examine the length with "len()"
+
+```
 len(li)  # => 6
+```
 
+Tuples are like lists but are immutable.
 
-# Tuples are like lists but are immutable.
+```
 tup = (1, 2, 3)
 tup[0]      # => 1
 tup[0] = 3  # Raises a TypeError
+```
 
-# Note that a tuple of length one has to have a comma after the last element but
-# tuples of other lengths, even zero, do not.
+Note that a tuple of length one has to have a comma after the last element but tuples of other lengths, even zero, do not.
+
+```
 type((1))   # => <class 'int'>
 type((1,))  # => <class 'tuple'>
 type(())    # => <class 'tuple'>
+```
 
-# You can do most of the list operations on tuples too
+You can do most of the list operations on tuples too
+
+```
 len(tup)         # => 3
 tup + (4, 5, 6)  # => (1, 2, 3, 4, 5, 6)
 tup[:2]          # => (1, 2)
 2 in tup         # => True
-
 # You can unpack tuples (or lists) into variables
 a, b, c = (1, 2, 3)  # a is now 1, b is now 2 and c is now 3
 # You can also do extended unpacking
@@ -400,132 +431,185 @@ d, e, f = 4, 5, 6  # tuple 4, 5, 6 is unpacked into variables d, e and f
 # respectively such that d = 4, e = 5 and f = 6
 # Now look how easy it is to swap two values
 e, d = d, e  # d is now 5 and e is now 4
+```
 
+Dictionaries store mappings from keys to values
 
-# Dictionaries store mappings from keys to values
+```
 empty_dict = {}
 # Here is a prefilled dictionary
 filled_dict = {"one": 1, "two": 2, "three": 3}
+```
 
-# Note keys for dictionaries have to be immutable types. This is to ensure that
-# the key can be converted to a constant hash value for quick look-ups.
-# Immutable types include ints, floats, strings, tuples.
+Note keys for dictionaries have to be immutable types. This is to ensure that the key can be converted to a constant hash value for quick look-ups. Immutable types include ints, floats, strings, tuples.
+
+```
 invalid_dict = {[1,2,3]: "123"}  # => Yield a TypeError: unhashable type: 'list'
 valid_dict = {(1,2,3):[1,2,3]}   # Values can be of any type, however.
+```
 
-# Look up values with []
+Look up values with []
+
+```
 filled_dict["one"]  # => 1
+```
 
-# Get all keys as an iterable with "keys()". We need to wrap the call in list()
-# to turn it into a list. We'll talk about those later.  Note - for Python
-# versions <3.7, dictionary key ordering is not guaranteed. Your results might
-# not match the example below exactly. However, as of Python 3.7, dictionary
-# items maintain the order at which they are inserted into the dictionary.
+Get all keys as an iterable with "keys()". We need to wrap the call in list() to turn it into a list. We'll talk about those later.  Note - for Python versions <3.7, dictionary key ordering is not guaranteed. Your results might not match the example below exactly. However, as of Python 3.7, dictionary items maintain the order at which they are inserted into the dictionary.
+
+```
 list(filled_dict.keys())  # => ["three", "two", "one"] in Python <3.7
 list(filled_dict.keys())  # => ["one", "two", "three"] in Python 3.7+
+```
 
+Get all values as an iterable with "values()". Once again we need to wrap it in list() to get it out of the iterable. Note - Same as above regarding key ordering.
 
-# Get all values as an iterable with "values()". Once again we need to wrap it
-# in list() to get it out of the iterable. Note - Same as above regarding key
-# ordering.
+```
 list(filled_dict.values())  # => [3, 2, 1]  in Python <3.7
 list(filled_dict.values())  # => [1, 2, 3] in Python 3.7+
+```
 
-# Check for existence of keys in a dictionary with "in"
+Check for existence of keys in a dictionary with "in"
+
+```
 "one" in filled_dict  # => True
 1 in filled_dict      # => False
+```
 
-# Looking up a non-existing key is a KeyError
+Looking up a non-existing key is a KeyError
+
+```
 filled_dict["four"]  # KeyError
+```
 
-# Use "get()" method to avoid the KeyError
+Use "get()" method to avoid the KeyError
+
+```
 filled_dict.get("one")      # => 1
 filled_dict.get("four")     # => None
 # The get method supports a default argument when the value is missing
 filled_dict.get("one", 4)   # => 1
 filled_dict.get("four", 4)  # => 4
+```
 
-# "setdefault()" inserts into a dictionary only if the given key isn't present
+"setdefault()" inserts into a dictionary only if the given key isn't present
+
+```
 filled_dict.setdefault("five", 5)  # filled_dict["five"] is set to 5
 filled_dict.setdefault("five", 6)  # filled_dict["five"] is still 5
+```
 
-# Adding to a dictionary
+Adding to a dictionary
+
+```
 filled_dict.update({"four":4})  # => {"one": 1, "two": 2, "three": 3, "four": 4}
 filled_dict["four"] = 4         # another way to add to dict
+```
 
-# Remove keys from a dictionary with del
+Remove keys from a dictionary with del
+
+```
 del filled_dict["one"]  # Removes the key "one" from filled dict
+```
 
-# From Python 3.5 you can also use the additional unpacking options
-{'a': 1, **{'b': 2}}  # => {'a': 1, 'b': 2}
-{'a': 1, **{'a': 2}}  # => {'a': 2}
+Sets store ... well sets
 
-
-
-# Sets store ... well sets
+```
 empty_set = set()
 # Initialize a set with a bunch of values.
 some_set = {1, 1, 2, 2, 3, 4}  # some_set is now {1, 2, 3, 4}
+```
 
-# Similar to keys of a dictionary, elements of a set have to be immutable.
+Similar to keys of a dictionary, elements of a set have to be immutable.
+
+```
 invalid_set = {[1], 1}  # => Raises a TypeError: unhashable type: 'list'
 valid_set = {(1,), 1}
+```
 
-# Add one more item to the set
+Add one more item to the set
+
+```
 filled_set = some_set
 filled_set.add(5)  # filled_set is now {1, 2, 3, 4, 5}
 # Sets do not have duplicate elements
 filled_set.add(5)  # it remains as before {1, 2, 3, 4, 5}
+```
 
-# Do set intersection with &
+Do set intersection with &
+
+```
 other_set = {3, 4, 5, 6}
 filled_set & other_set  # => {3, 4, 5}
+```
 
-# Do set union with |
+Do set union with |
+
+```
 filled_set | other_set  # => {1, 2, 3, 4, 5, 6}
+```
 
-# Do set difference with -
+Do set difference with -
+
+```
 {1, 2, 3, 4} - {2, 3, 5}  # => {1, 4}
+```
 
-# Do set symmetric difference with ^
+Do set symmetric difference with ^
+
+```
 {1, 2, 3, 4} ^ {2, 3, 5}  # => {1, 4, 5}
+```
 
-# Check if set on the left is a superset of set on the right
+Check if set on the left is a superset of set on the right
+
+```
 {1, 2} >= {1, 2, 3} # => False
+```
 
-# Check if set on the left is a subset of set on the right
+Check if set on the left is a subset of set on the right
+
+```
 {1, 2} <= {1, 2, 3} # => True
+```
 
-# Check for existence in a set with in
+Check for existence in a set with in
+
+```
 2 in filled_set   # => True
 10 in filled_set  # => False
+```
 
-# Make a one layer deep copy
+Make a one layer deep copy
+
+```
 filled_set = some_set.copy()  # filled_set is {1, 2, 3, 4, 5}
 filled_set is some_set        # => False
+```
 
+### 3. Control Flow and Iterables
 
-####################################################
-## 3. Control Flow and Iterables
-####################################################
+Let's just make a variable
 
-# Let's just make a variable
+```
 some_var = 5
+```
 
-# Here is an if statement. Indentation is significant in Python!
-# Convention is to use four spaces, not tabs.
-# This prints "some_var is smaller than 10"
+Here is an if statement. Indentation is significant in Python! Convention is to use four spaces, not tabs. This prints "some_var is smaller than 10"
+
+```
 if some_var > 10:
     print("some_var is totally bigger than 10.")
 elif some_var < 10:    # This elif clause is optional.
     print("some_var is smaller than 10.")
 else:                  # This is optional too.
     print("some_var is indeed 10.")
+```
 
 
-"""
 For loops iterate over lists
-prints:
+
+```
+"""prints:
     dog is a mammal
     cat is a mammal
     mouse is a mammal
@@ -533,11 +617,12 @@ prints:
 for animal in ["dog", "cat", "mouse"]:
     # You can use format() to interpolate formatted strings
     print("{} is a mammal".format(animal))
+```
 
-"""
-"range(number)" returns an iterable of numbers
-from zero up to (but excluding) the given number
-prints:
+"range(number)" returns an iterable of numbers from zero up to (but excluding) the given number
+
+```
+""" prints:
     0
     1
     2
@@ -546,10 +631,12 @@ prints:
 for i in range(4):
     print(i)
 
-"""
-"range(lower, upper)" returns an iterable of numbers
-from the lower number to the upper number
-prints:
+```
+
+"range(lower, upper)" returns an iterable of numbers from the lower number to the upper number
+
+```
+"""prints:
     4
     5
     6
@@ -557,19 +644,20 @@ prints:
 """
 for i in range(4, 8):
     print(i)
+```
 
-"""
-"range(lower, upper, step)" returns an iterable of numbers
-from the lower number to the upper number, while incrementing
-by step. If step is not indicated, the default value is 1.
-prints:
+"range(lower, upper, step)" returns an iterable of numbers from the lower number to the upper number, while incrementing by step. If step is not indicated, the default value is 1.
+
+```
+"""prints:
     4
     6
 """
 for i in range(4, 8, 2):
     print(i)
 
-"""
+```
+
 Loop over a list to retrieve both the index and the value of each list item:
     0 dog
     1 cat
