@@ -32,34 +32,6 @@ $ git status
 # To learn other "tid bits" about git status
 $ git help status
 
-# add a file in your current working directory
-$ git add HelloWorld.java
-
-# add a file in a nested dir
-$ git add /path/to/file/HelloWorld.c
-
-# Regular Expression support!
-$ git add ./*.java
-
-# You can also add everything in your working directory to the staging area.
-$ git add -A
-
-# list existing branches & remotes
-$ git branch -a
-
-# create a new branch
-$ git branch myNewBranch
-
-# delete a branch
-$ git branch -d myBranch
-
-# rename a branch
-# git branch -m <oldname> <newname>
-$ git branch -m myBranchName myNewBranchName
-
-# edit a branch's description
-$ git branch myBranchName --edit-description
-
 # List tags
 $ git tag
 
@@ -99,19 +71,6 @@ $ git clone --depth 1 https://github.com/adambard/learnxinyminutes-docs.git
 
 # clone only a specific branch
 $ git clone -b master-cn https://github.com/adambard/learnxinyminutes-docs.git --single-branch
-
-# commit with a message
-$ git commit -m "Added multiplyNumbers() function to HelloWorld.c"
-
-# signed commit with a message (user.signingkey must have been set
-# with your GPG key e.g. git config --global user.signingkey 5173AAD5)
-$ git commit -S -m "signed commit message"
-
-# automatically stage modified or deleted files, except new files, and then commit
-$ git commit -a -m "Modified foo.php and removed bar.php"
-
-# change last commit (this deletes previous commit with a fresh commit)
-$ git commit --amend -m "Correct message"
 
 # Show difference between your working dir and the index
 $ git diff

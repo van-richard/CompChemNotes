@@ -1,6 +1,6 @@
 ---
 layout: default
-title: init 
+title: config 
 parent: Git
 grand_parent: Terminal
 ---
