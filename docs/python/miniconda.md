@@ -1,6 +1,6 @@
 ---
 layout: default
-title: miniconda
+title: Minionda
 parent: Python
 ---
 
