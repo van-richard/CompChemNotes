@@ -46,32 +46,6 @@ $ git tag -a v2.0 -m 'my version 2.0'
 # and the annotation message before showing the commit information.
 $ git show v2.0
 
-# Push a single tag to remote
-$ git push origin v2.0
-
-# Push a lot of tags to remote
-$ git push origin --tags
-
-# Checkout a repo - defaults to master branch
-$ git checkout
-
-# Checkout a specified branch
-$ git checkout branchName
-
-# Create a new branch & switch to it
-# equivalent to "git branch <name>; git checkout <name>"
-
-$ git checkout -b newBranch
-
-# Clone learnxinyminutes-docs
-$ git clone https://github.com/adambard/learnxinyminutes-docs.git
-
-# shallow clone - faster cloning that pulls only latest snapshot
-$ git clone --depth 1 https://github.com/adambard/learnxinyminutes-docs.git
-
-# clone only a specific branch
-$ git clone -b master-cn https://github.com/adambard/learnxinyminutes-docs.git --single-branch
-
 # Show difference between your working dir and the index
 $ git diff
 
@@ -121,34 +95,6 @@ $ git mv HelloWorld.c ./new/path/HelloWorld.c
 # Force rename or move
 # "existingFile" already exists in the directory, will be overwritten
 $ git mv -f myFile existingFile
-
-# Update your local repo, by merging in new changes
-# from the remote "origin" and "master" branch.
-# git pull <remote> <branch>
-$ git pull origin master
-
-# By default, git pull will update your current branch
-# by merging in new changes from its remote-tracking branch
-$ git pull
-
-# Merge in changes from remote branch and rebase
-# branch commits onto your local repo, like: "git fetch <remote> <branch>, git
-# rebase <remote>/<branch>"
-$ git pull origin master --rebase
-
-# Push and merge changes from a local repo to a
-# remote named "origin" and "master" branch.
-# git push <remote> <branch>
-$ git push origin master
-
-# By default, git push will push and merge changes from
-# the current branch to its remote-tracking branch
-$ git push
-
-# To link up current local branch with a remote branch, add -u flag:
-$ git push -u origin master
-# Now, anytime you want to push from that same local branch, use shortcut:
-$ git push
 
 $ git stash
 Saved working directory and index state \
