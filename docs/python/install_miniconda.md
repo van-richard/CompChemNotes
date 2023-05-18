@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Minionda
+title: Install Miniconda
 parent: Python
 ---
 
