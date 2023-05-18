@@ -680,7 +680,9 @@ while x < 4:
     print(x)
     x += 1  # Shorthand for x = x + 1
 
-# Handle exceptions with a try/except block
+Handle exceptions with a try/except block
+
+```
 try:
     # Use "raise" to raise an error
     raise IndexError("This is an index error")
@@ -693,8 +695,11 @@ else:                    # Optional clause to the try/except block. Must follow
     print("All good!")   # Runs only if the code in try raises no exceptions
 finally:                 # Execute under all circumstances
     print("We can clean up resources here")
+```
 
-# Instead of try/finally to cleanup resources you can use a with statement
+Instead of try/finally to cleanup resources you can use a with statement
+
+```
 with open("myfile.txt") as f:
     for line in f:
         print(line)
@@ -718,20 +723,23 @@ with open('myfile2.txt', "r+") as file:
     contents = json.load(file)       # reads a json object from a file
 print(contents)
 # print: {"aa": 12, "bb": 21}
+```
 
+Python offers a fundamental abstraction called the Iterable. An iterable is an object that can be treated as a sequence. The object returned by the range function, is an iterable.
 
-# Python offers a fundamental abstraction called the Iterable.
-# An iterable is an object that can be treated as a sequence.
-# The object returned by the range function, is an iterable.
-
+```
 filled_dict = {"one": 1, "two": 2, "three": 3}
 our_iterable = filled_dict.keys()
 print(our_iterable)  # => dict_keys(['one', 'two', 'three']). This is an object
                      # that implements our Iterable interface.
+```
 
-# We can loop over it.
+We can loop over it.
+
+```
 for i in our_iterable:
     print(i)  # Prints one, two, three
+```
 
 # However we cannot address elements by index.
 our_iterable[1]  # Raises a TypeError
