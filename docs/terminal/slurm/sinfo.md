@@ -5,7 +5,7 @@ parent: SLURM
 grand_parent: Terminal
 ---
 
-## Get Node information
+# Get Node information
 
 List nodes.
 

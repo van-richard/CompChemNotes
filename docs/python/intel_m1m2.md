@@ -4,7 +4,7 @@ title: Intel Env. on Apple Silicon
 parent: Python
 ---
 
-### Intel Environments on m1/m2 Macs
+# Intel Environments on m1/m2 Macs
 
 Intel Conda environment on m1/m2 Macs. Ambertools example.
 

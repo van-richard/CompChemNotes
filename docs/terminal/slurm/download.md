@@ -5,7 +5,7 @@ parent: SLURM
 grand_parent: Terminal
 ---
 
-## Download Files/Folders
+# Download Files/Folders
 
 There are 2 options to downloading files and folders.
 

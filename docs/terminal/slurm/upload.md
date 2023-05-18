@@ -5,7 +5,7 @@ parent: SLURM
 grand_parent: Terminal
 ---
 
-## Uploading Files/Folders
+# Uploading Files/Folders
 
 The commands `scp` and `rsync` also uploads files and folders, just switch the [source] and [destination].
 

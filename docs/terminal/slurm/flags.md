@@ -5,7 +5,7 @@ parent: SLURM
 grand_parent: Terminal
 ---
 
-### SLURM flags
+# SLURM flags
 
 | Option                  | Meaning |
 | :-----                  | :------ |
@@ -22,7 +22,7 @@ grand_parent: Terminal
 | \--job\-name=NAME       | Name your job, "NAME", so you can identify it in the queue |
 | \--array=0-#            | Mechanism for submitting and managing similar jobs (# can be index values) |
 
-### Example
+## Example
 
 Example of debug batch script.
 

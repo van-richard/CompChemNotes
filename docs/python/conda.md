@@ -6,39 +6,44 @@ parent: Python
 
 # Conda Commands
 
-Creating a new virtual environment.
+## Creating a new virtual environment.
 
 ```
 conda create -n <name>                          # Create New environment
 conda create -n <name> python=<version-number>  # Specific Python version
 ```
 <br />
-Running the new environment.
+
+## Running the new environment.
 
 ```
 conda activate <name>
 ```
 <br />
-In your new activated environment, you can now install needed packages.
+
+### In your new activated environment, you can now install needed packages.
 
 ```
 conda install <package-name>                 # Install Package
 conda install -c conda-forge <package-name>  # Install package from a specific channel (-c)
 ```
 <br />
-To leave a virutal environment.
+
+## Leave a virutal environment.
 
 ```
 conda deactivate
 ```
 <br />
-Deleting conda environments and related packages.
+
+## Deleting conda environments and related packages.
 
 ```
 conda env remove -n <name>
 ```
 <br />
-List available environments.
+
+## List available environments.
 
 ```
 conda env list
@@ -51,17 +56,19 @@ conda activate <name>
 conda list
 ```
 <br />
-Exporting environments to a YML file.
+
+## Exporting environments to a YML file.
 
 ```
 conda activate <name>
 conda env export > <name>.yml
 ```
 <br />
-Installing a Conda environment from a YML file.
+
+## Installing a Conda environment from a YML file.
 
 ```
-codna env create -f <name>.yml
+conda env create -f <name>.yml
 ```
 <br />
 

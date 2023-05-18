@@ -5,7 +5,7 @@ parent: SLURM
 grand_parent: Terminal
 ---
 
-## Submitting Jobs
+# Submitting Jobs
 
 To submit jobs to the SLURM scheduler, use `sbatch` followed by the name of your batch script.
 

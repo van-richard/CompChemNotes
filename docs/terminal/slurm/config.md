@@ -1,33 +1,9 @@
 ---
 layout: default
-title: Automatic SSH
-parent: Terminal
+title: config (Multiple SSH) 
+parent: SLURM
+grand_parent: Terminal
 ---
-
-# Automatic SSH (No Password) for MacOS
-
-Generate a key in your `/home/`:
-
-```
-# -t is type
-# -b is bits
-ssh-keygen -t rsa -b 4096
-```
-
-Save the key in the default, it should be `~/.ssh/id_rsa`. You do not want to have a passphrase. Press enter 3 times. 
-
-Congrats! You now have a key! Two files are made: 
-
-1. id_rsa - This is your RSA "private" key used to sign and authenticate your connection to a remote host.
-2. id_rsa.pub - This is your "public" key, which when suppied to the remote host (Next step), allows the host to authenticate the connections as being from you.
-
-Copy the key to your remote host (i.e. Schooner, PETE, etc.), by adding this to the `authorized_keys` file.
-
-```
-cat ~/.ssh/id_rsa.pub | ssh <username>@<hostname> 'cat >> ~/.ssh/authorized_keys'
-```
-
-Enter your password one last time, and you're done!
 
 # Managing Multiple SSH Connections
 

@@ -5,7 +5,7 @@ parent: SLURM
 grand_parent: Terminal
 ---
 
-## Login 
+# Login 
 
 OSCER has 2 login nodes, if you don't specify which of the two, then it will automatically chose on for you.
 

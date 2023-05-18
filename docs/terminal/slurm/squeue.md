@@ -5,7 +5,7 @@ parent: SLURM
 grand_parent: Terminal
 ---
 
-## Checking SLURM queue 
+# Checking SLURM queue 
 
 Shows all jobs running/pending in queue.
 
