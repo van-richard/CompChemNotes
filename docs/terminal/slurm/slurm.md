@@ -2,8 +2,6 @@
 layout: default
 title: SLURM 
 parent: Terminal
-# nav_order: 1
-has_children: true
 ---
 
 Examples shown below references the OSCER Supercomputer at the University of Oklahoma. However, this similar commands can be used for other supercomputers with minor adjustments.

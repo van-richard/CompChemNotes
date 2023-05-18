@@ -1,9 +1,7 @@
 ---
 layout: default
-title: SLURM 
-parent: Download Files/Folders
-# nav_order: 1
-has_children: true
+title: Download Files/Folders 
+parent: SLURM
 ---
 
 ## Download Files/Folders

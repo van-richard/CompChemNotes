@@ -1,9 +1,7 @@
 ---
 layout: default
-title: SLURM 
-parent: Upload Files/Folders
-# nav_order: 1
-has_children: true
+title: Upload Files/Folders
+parent: SLURM
 ---
 
 ## Uploading Files/Folders

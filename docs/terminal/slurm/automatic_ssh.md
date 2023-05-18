@@ -1,9 +1,7 @@
 ---
 layout: default
-title: SLURM 
-parent: Auto-Login SSH (Mac)
-# nav_order: 1
-has_children: true
+title: Auto-Login SSH (Mac) 
+parent: SLURM
 ---
 
 ### Login with no password
