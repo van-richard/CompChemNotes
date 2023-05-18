@@ -2,6 +2,7 @@
 layout: default
 title: Auto-Login SSH (Mac) 
 parent: SLURM
+grand_parent: Terminal
 ---
 
 ### Login with no password

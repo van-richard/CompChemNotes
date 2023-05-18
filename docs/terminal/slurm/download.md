@@ -2,6 +2,7 @@
 layout: default
 title: Download Files/Folders 
 parent: SLURM
+grand_parent: Terminal
 ---
 
 ## Download Files/Folders

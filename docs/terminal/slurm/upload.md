@@ -2,6 +2,7 @@
 layout: default
 title: Upload Files/Folders
 parent: SLURM
+grand_parent: Terminal
 ---
 
 ## Uploading Files/Folders
