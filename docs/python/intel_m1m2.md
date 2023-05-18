@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Intel Environment on Apple Silicon
+title: Intel Env. on Apple Silicon
 parent: Python
 ---
 
