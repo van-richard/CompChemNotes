@@ -48,6 +48,7 @@ Nor like this:
 ```
 variable= "Some string" # => returns error: "Some string: command not found"
 ```
+
 Bash will decide that "Some string" is a command it must execute and give an error because it can't be found. In this case the "variable=" part is seen as a variable assignment valid only for the scope of the "Some string" command.
 
 Using the variable:
@@ -170,36 +171,6 @@ read name
 # Note that we didn't need to declare a new variable.
 echo "Hello, $name!"
 
-# We have the usual if structure.
-# Condition is true if the value of $name is not equal to the current user's login username:
-if [[ "$name" != "$USER" ]]; then
-    echo "Your name isn't your username"
-else
-    echo "Your name is your username"
-fi
-
-# To use && and || with if statements, you need multiple pairs of square brackets:
-read age
-if [[ "$name" == "Steve" ]] && [[ "$age" -eq 15 ]]; then
-    echo "This will run if $name is Steve AND $age is 15."
-fi
-
-if [[ "$name" == "Daniya" ]] || [[ "$name" == "Zach" ]]; then
-    echo "This will run if $name is Daniya OR Zach."
-fi
-# There are other comparison operators for numbers listed below:
-# -ne - not equal
-# -lt - less than
-# -gt - greater than
-# -le - less than or equal to
-# -ge - greater than or equal to
-
-# There is also the `=~` operator, which tests a string against the Regex pattern:
-email=me@example.com
-if [[ "$email" =~ [a-z]+@[a-z]{2,}\.(com|net|org) ]]
-then
-    echo "Valid email!"
-fi
 
 # There is also conditional execution
 echo "Always executed" || echo "Only executed if first command fails"
@@ -248,48 +219,11 @@ ls -R # Recursively `ls` this directory and all of its subdirectories
 # That's how we can list .txt files in the current directory:
 ls -l | grep "\.txt"
 
-# Use `cat` to print files to stdout:
-cat file.txt
-
-# We can also read the file using `cat`:
-Contents=$(cat file.txt)
-# "\n" prints a new line character
-# "-e" to interpret the newline escape characters as escape characters
-echo -e "START OF FILE\n$Contents\nEND OF FILE"
-# => START OF FILE
-# => [contents of file.txt]
-# => END OF FILE
-
-# Use `cp` to copy files or directories from one place to another.
-# `cp` creates NEW versions of the sources,
-# so editing the copy won't affect the original (and vice versa).
-# Note that it will overwrite the destination if it already exists.
-cp srcFile.txt clone.txt
-cp -r srcDirectory/ dst/ # recursively copy
-
 # Look into `scp` or `sftp` if you plan on exchanging files between computers.
 # `scp` behaves very similarly to `cp`.
 # `sftp` is more interactive.
 
-# Use `mv` to move files or directories from one place to another.
-# `mv` is similar to `cp`, but it deletes the source.
-# `mv` is also useful for renaming files!
-mv s0urc3.txt dst.txt # sorry, l33t hackers...
 
-# Since bash works in the context of a current directory, you might want to
-# run your command in some other directory. We have cd for changing location:
-cd ~    # change to home directory
-cd      # also goes to home directory
-cd ..   # go up one directory
-        # (^^say, from /home/username/Downloads to /home/username)
-cd /home/username/Documents   # change to specified directory
-cd ~/Documents/..    # now in home directory (if ~/Documents exists)
-cd -    # change to last directory
-# => /home/username/Documents
-
-# Use subshells to work across directories
-(echo "First, I'm here: $PWD") && (cd someDir; echo "Then, I'm here: $PWD")
-pwd # still in first directory
 
 # Use `mkdir` to create new directories.
 mkdir myNewDir
