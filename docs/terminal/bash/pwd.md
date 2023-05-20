@@ -5,7 +5,9 @@ grand_parent: Terminal
 parent: BASH
 ---
 
-# Print current working directory 
+# Print the current/working directory 
+
+Tells you were you are (if you are lost).
 
 ```
 pwd

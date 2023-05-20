@@ -1,11 +1,11 @@
 ---
 layout: default
-title: SLURM Flags 
+title: SLURM Options 
 parent: SLURM
 grand_parent: Terminal
 ---
 
-# SLURM flags
+# SLURM Options
 
 | Option                  | Meaning |
 | :-----                  | :------ |
