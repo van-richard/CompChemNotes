@@ -4,3 +4,17 @@ title: ChimeraX
 nav_order: 5
 has_children: true
 ---
+
+# Command line is independent of model panel!
+
+Command Line:
+
+| Option                  | Meaning |
+| :-----                  | :------ |
+| show [model #] [ribbon, atom, etc.] | Displays the selection in ribbon, atom, etc. | 
+| hide [model #] [ribbon, atom, etc.] | Hides the selection in ribbon, atom, etc. | 
+| color byhetero | Colors by hetero-atom |
+| color bychain | Colors by chain |
+| color bymodel | Colors by model # |
+| split [option: model #] | Splits the model by chain |
+| sel [model, chain, residue, or atom #] | Select the model, chain, residue, or atom |
