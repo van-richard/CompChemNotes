@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MD Analysis
+title: AmberTools
 nav_order: 4
 has_children: true
 ---
