@@ -1,6 +1,6 @@
 ---
 layout: default
-title: RMSD
+title: RMSF
 parent: AmberTools
 ---
 
