@@ -1,10 +1,12 @@
 ---
 layout: default
-title: PyTraj Distance
+title: Distances
 parent: AmberTools
 ---
 
 # Distance analysis from trajectory
+
+Plotting distances between `selection`. Which can be Amber mask.
 
 ```
 import pytraj as pt
