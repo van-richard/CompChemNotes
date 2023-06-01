@@ -11,7 +11,7 @@ parent: BASH
 cat file.txt
 ```
 
-## We can also read the file using `cat`:
+# We can also read the file using `cat`:
 
 ```
 Contents=$(cat file.txt)

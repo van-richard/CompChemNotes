@@ -10,7 +10,8 @@ parent: BASH
 Use `cp` to copy files or directories from one place to another.
 
 - `cp` creates NEW versions of the sources, so editing the copy won't affect the original (and vice versa).
-## Note that it will overwrite the destination if it already exists.
+
+# Note that it will overwrite the destination if it already exists.
 
 ```
 cp srcFile.txt clone.txt

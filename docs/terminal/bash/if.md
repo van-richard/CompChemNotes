@@ -15,7 +15,7 @@ else
 fi
 ```
 
-## To use && and || with if statements, you need multiple pairs of square brackets:
+# To use && and || with if statements, you need multiple pairs of square brackets:
 
 ```
 read age
@@ -28,7 +28,7 @@ if [[ "$name" == "Daniya" ]] || [[ "$name" == "Zach" ]]; then
 fi
 ```
 
-## There are other comparison operators for numbers listed below:
+# There are other comparison operators for numbers listed below:
 
 ```
 # -ne - not equal
@@ -38,7 +38,7 @@ fi
 # -ge - greater than or equal to
 ```
 
-## There is also the `=~` operator, which tests a string against the Regex pattern:
+# There is also the `=~` operator, which tests a string against the Regex pattern:
 
 ```
 email=me@example.com

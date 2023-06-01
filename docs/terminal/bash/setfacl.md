@@ -13,7 +13,7 @@ parent: BASH
 setfacl -m u:username:rwx myfolder
 ```
 
-## Options 
+# Options 
 
 Helpful options.
 

@@ -5,9 +5,17 @@ nav_order: 5
 has_children: true
 ---
 
+# Open PDB from RCSB
+
+On Chimera/ChimeraX command line, type:
+
+```
+open PDB_CODE
+```
+
 # Command line is independent of model panel!
 
-Command Line:
+Command Line Options:
 
 | Option                  | Meaning |
 | :-----                  | :------ |

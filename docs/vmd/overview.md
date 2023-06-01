@@ -34,3 +34,24 @@ light 1 on
 light 2 off
 light 3 off
 ```
+
+# Rotate System
+
+Press `r` 
+
+# Translate System
+
+Press `t`
+
+## Translate System Coordinates
+
+Press `8`
+
+# Distance between Atoms
+
+Press `2` and choose 2 atoms
+.
+# Label Atoms
+
+Press `1` and choose 1 atom.
+
