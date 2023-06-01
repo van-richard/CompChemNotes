@@ -6,11 +6,12 @@ has_children: true
 ---
 
 ```  
-#Single line comments start with a number symbol.
+# Single line comments start with a number symbol.
 ```
 
 ```
-""" Multiline strings can be written
+""" 
+    Multiline strings can be written
     using three "s, and are often used
     as documentation.
 """
@@ -741,66 +742,95 @@ for i in our_iterable:
     print(i)  # Prints one, two, three
 ```
 
-# However we cannot address elements by index.
+However we cannot address elements by index.
+
+```
 our_iterable[1]  # Raises a TypeError
+```
 
-# An iterable is an object that knows how to create an iterator.
+An iterable is an object that knows how to create an iterator.
+
+```
 our_iterator = iter(our_iterable)
+```
 
-# Our iterator is an object that can remember the state as we traverse through
-# it. We get the next object with "next()".
+Our iterator is an object that can remember the state as we traverse through it. We get the next object with "next()".
+
+```
 next(our_iterator)  # => "one"
+```
 
-# It maintains state as we iterate.
+It maintains state as we iterate.
+
+```
 next(our_iterator)  # => "two"
 next(our_iterator)  # => "three"
+```
 
-# After the iterator has returned all of its data, it raises a
-# StopIteration exception
+After the iterator has returned all of its data, it raises a stop iteration exception
+
+```
 next(our_iterator)  # Raises StopIteration
+```
 
-# We can also loop over it, in fact, "for" does this implicitly!
+We can also loop over it, in fact, "for" does this implicitly!
+
+```
 our_iterator = iter(our_iterable)
 for i in our_iterator:
     print(i)  # Prints one, two, three
+```
 
-# You can grab all the elements of an iterable or iterator by call of list().
+You can grab all the elements of an iterable or iterator by call of list().
+
+```
 list(our_iterable)  # => Returns ["one", "two", "three"]
 list(our_iterator)  # => Returns [] because state is saved
+```
 
-
-####################################################
 ## 4. Functions
-####################################################
 
-# Use "def" to create new functions
+Use "def" to create new functions
+
+```
 def add(x, y):
     print("x is {} and y is {}".format(x, y))
     return x + y  # Return values with a return statement
+```
 
-# Calling functions with parameters
+Calling functions with parameters
+
+```
 add(5, 6)  # => prints out "x is 5 and y is 6" and returns 11
+```
 
-# Another way to call functions is with keyword arguments
+Another way to call functions is with keyword arguments
+
+```
 add(y=6, x=5)  # Keyword arguments can arrive in any order.
+```
 
-# You can define functions that take a variable number of
-# positional arguments
+You can define functions that take a variable number of positional arguments
+
+```
 def varargs(*args):
     return args
 
 varargs(1, 2, 3)  # => (1, 2, 3)
+```
 
-# You can define functions that take a variable number of
-# keyword arguments, as well
+You can define functions that take a variable number of keyword arguments, as well
+
+```
 def keyword_args(**kwargs):
     return kwargs
 
-# Let's call it to see what happens
 keyword_args(big="foot", loch="ness")  # => {"big": "foot", "loch": "ness"}
+```
 
+You can do both at once, if you like
 
-# You can do both at once, if you like
+```
 def all_the_args(*args, **kwargs):
     print(args)
     print(kwargs)
@@ -809,16 +839,21 @@ all_the_args(1, 2, a=3, b=4) prints:
     (1, 2)
     {"a": 3, "b": 4}
 """
+```
 
-# When calling functions, you can do the opposite of args/kwargs!
-# Use * to expand tuples and use ** to expand kwargs.
+When calling functions, you can do the opposite of args/kwargs!. Use * to expand tuples and use ** to expand kwargs.
+
+```
 args = (1, 2, 3, 4)
 kwargs = {"a": 3, "b": 4}
 all_the_args(*args)            # equivalent: all_the_args(1, 2, 3, 4)
 all_the_args(**kwargs)         # equivalent: all_the_args(a=3, b=4)
 all_the_args(*args, **kwargs)  # equivalent: all_the_args(1, 2, 3, 4, a=3, b=4)
+```
 
-# Returning multiple values (with tuple assignments)
+Returning multiple values (with tuple assignments)
+
+```
 def swap(x, y):
     return y, x  # Return multiple values as a tuple without the parenthesis.
                  # (Note: parenthesis have been excluded but can be included)
@@ -827,8 +862,11 @@ x = 1
 y = 2
 x, y = swap(x, y)     # => x = 2, y = 1
 # (x, y) = swap(x,y)  # Again the use of parenthesis is optional.
+```
 
-# global scope
+global scope
+
+```
 x = 5
 
 def set_x(num):
@@ -852,9 +890,11 @@ prints:
     5
     6
 """
+```
 
+Python has first class functions
 
-# Python has first class functions
+```
 def create_adder(x):
     def adder(y):
         return x + y
@@ -862,69 +902,43 @@ def create_adder(x):
 
 add_10 = create_adder(10)
 add_10(3)   # => 13
+```
 
-# There are also anonymous functions
+There are also anonymous functions
+
+```
 (lambda x: x > 2)(3)                  # => True
 (lambda x, y: x ** 2 + y ** 2)(2, 1)  # => 5
+```
 
-# There are built-in higher order functions
+There are built-in higher order functions
+
+```
 list(map(add_10, [1, 2, 3]))          # => [11, 12, 13]
 list(map(max, [1, 2, 3], [4, 2, 1]))  # => [4, 2, 3]
 
 list(filter(lambda x: x > 5, [3, 4, 5, 6, 7]))  # => [6, 7]
+```
 
-# We can use list comprehensions for nice maps and filters
-# List comprehension stores the output as a list (which itself may be nested).
+We can use list comprehensions for nice maps and filters. List comprehension stores the output as a list (which itself may be nested).
+
+```
 [add_10(i) for i in [1, 2, 3]]         # => [11, 12, 13]
 [x for x in [3, 4, 5, 6, 7] if x > 5]  # => [6, 7]
+```
 
-# You can construct set and dict comprehensions as well.
+You can construct set and dict comprehensions as well.
+
+```
 {x for x in 'abcddeef' if x not in 'abc'}  # => {'d', 'e', 'f'}
 {x: x**2 for x in range(5)}  # => {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+```
 
+## 5. Classes
 
-####################################################
-## 5. Modules
-####################################################
+We use the "class" statement to create a class
 
-# You can import modules
-import math
-print(math.sqrt(16))  # => 4.0
-
-# You can get specific functions from a module
-from math import ceil, floor
-print(ceil(3.7))   # => 4.0
-print(floor(3.7))  # => 3.0
-
-# You can import all functions from a module.
-# Warning: this is not recommended
-from math import *
-
-# You can shorten module names
-import math as m
-math.sqrt(16) == m.sqrt(16)  # => True
-
-# Python modules are just ordinary Python files. You
-# can write your own, and import them. The name of the
-# module is the same as the name of the file.
-
-# You can find out which functions and attributes
-# are defined in a module.
-import math
-dir(math)
-
-# If you have a Python script named math.py in the same
-# folder as your current script, the file math.py will
-# be loaded instead of the built-in Python module.
-# This happens because the local folder has priority
-# over Python's built-in libraries.
-
-
-####################################################
-## 6. Classes
-####################################################
-
-# We use the "class" statement to create a class
+```
 class Human:
 
     # A class attribute. It is shared by all instances of this class
@@ -978,7 +992,7 @@ class Human:
     @age.deleter
     def age(self):
         del self._age
-
+```
 
 # When a Python interpreter reads a source file it executes all its code.
 # This __name__ check makes sure this code block is only executed when this
