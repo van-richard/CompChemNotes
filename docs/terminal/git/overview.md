@@ -6,25 +6,33 @@ parent: Terminal
 has_children: true
 ---
  
+Quickly check available commands
+
 ```
-# Quickly check available commands
-$ git help
+git help
+```
 
-# Check all available commands
-$ git help -a
+Check all available commands
 
-# Command specific help - user manual
-# git help <command_here>
-$ git help add
-$ git help commit
-$ git help init
+```
+git help -a
+```
+
+Command specific help - user manual
+
+```
+git help <command_here>
+git help add
+git help commit
+git help init
 # or git <command_here> --help
-$ git add --help
-$ git commit --help
-$ git init --help
+git add --help
+git commit --help
+git init --help
 
-$ echo "temp/" >> .gitignore
-$ echo "private_key" >> .gitignore
+echo "temp/" >> .gitignore
+echo "private_key" >> .gitignore
+```
 
 # Will display the branch, untracked files, changes and other differences
 $ git status
