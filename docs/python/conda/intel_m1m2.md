@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Intel Env. on Apple Silicon
-parent: Python
+grand_parent: Python
+parent: Conda
 ---
 
 # Intel Environments on m1/m2 Macs

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Install Miniconda
-parent: Python
+grand_parent: Python
+parent: Conda
 ---
 
 In the future, you may come into the problem of needing multiple version of Python or Python Library. By installing Anaconda (or miniconda/miniforge) you will save yourself from a major headache.

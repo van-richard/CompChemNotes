@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Conda Commands
-parent: Python
+grand_parent: Python
+parent: Conda
 ---
 
 # Conda Commands
