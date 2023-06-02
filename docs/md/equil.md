@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Equilibration 
-parent: MD
+parent: Molecular Dynamics
 ---
 
 # Equilibrating your system

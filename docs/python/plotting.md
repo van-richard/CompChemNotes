@@ -87,3 +87,17 @@ ax[0,1].plot(x, y)
 ax[1,0].plot(x, -y)
 ax[1,1].plot(x, -y)
 ```
+
+# Looping Subplots
+
+```
+import matplotlib.pyplot as plt
+
+fig, axs = plt.subplots(2,5, figsize=(15, 6), facecolor='w', edgecolor='k')
+
+axs = axs.ravel()
+
+for i in range(10):
+    axs[i].contourf(np.random.rand(10,10),5,cmap=plt.cm.Oranges)
+    axs[i].set_title(str(250+i))
+```

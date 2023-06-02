@@ -7,6 +7,18 @@ parent: BASH
 
 # Copy files/folders
 
+Copy files:
+
+```
+cp [FILE_1] [FILE_2]
+```
+
+Copy folders:
+
+```
+cp [FOLDER_1] [FOLDER_2]
+```
+
 Use `cp` to copy files or directories from one place to another.
 
 - `cp` creates NEW versions of the sources, so editing the copy won't affect the original (and vice versa).
@@ -21,4 +33,10 @@ or
 
 ```
 cp -r srcDirectory/ dst/ # recursively copy
+```
+
+# Copying can be down with paths
+
+```
+cp -r /path/to/dir_1 /path/to/dir_2
 ```

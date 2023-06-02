@@ -1,7 +1,7 @@
 ---
 layout: default
 title: tleap
-parent: MD
+parent: Molecular Dynamics
 ---
 
 # Prepare your input files
