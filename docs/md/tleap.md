@@ -2,11 +2,12 @@
 layout: default
 title: tleap
 parent: Molecular Dynamics
+nav_order: 1
 ---
 
 # Prepare your input files
 
-# Example with Protein, RNA, DNA, and water in Amber20.
+# Example file with Protein, RNA, DNA, and water in Amber20.
 
 ```
 source leaprc.protein.ff14SB
