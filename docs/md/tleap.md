@@ -24,8 +24,13 @@ solvatebox protein TIP3PBOX 12.0 iso 0.8
 addions protein Na+ 0
 
 saveamberparm protein step3_pbcsetup.parm7 step3_pbcsetup.rst7
-saveamberparm protein step3_pbcsetup.parm7 step3_pbcsetup.ncrst
 savepdb protein step3_pbcsetup_wat.pdb
 
 quit
+```
+
+To run:
+
+```
+tleap -sf tlaep.in
 ```
