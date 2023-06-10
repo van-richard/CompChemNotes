@@ -11,7 +11,7 @@ Modified tutorial from [Amber MD](https://ambermd.org/tutorials/basic/tutorial7/
 
 Follow everything up to section **IV. Use LEaP to Build a Protein System in Explicit Solvent**
 
-1. Set AMBERHOME
+## A. Set AMBERHOME
 
 To run an executable in Amber, you need set the AMBERHOME environment variable. This script will set up your shell environment for that:
 
@@ -19,7 +19,7 @@ To run an executable in Amber, you need set the AMBERHOME environment variable. 
 source /home/van/.Programs/amber20/amber.sh
 ```
 
-2. Prepare the following input file,`tleap.in`, for *tleap*
+## B. Prepare the following input file,`tleap.in`, for *tleap*
 
 ```
 source leaprc.protein.ff19SB
@@ -42,13 +42,13 @@ addIonsRand ramp Na+ 19 Cl- 19
 saveamberparm ramp RAMP1_ion.prmtop RAMP1_ion.inpcrd
 ```
 
-3. Run *tleap*
+## C. Run *tleap*
 
 ```
 tleap -sf tleap.in
 ```
 
-4. Check output with VMD
+## D. Check output with VMD
 
 *Note:* The position of the ions are random, so yours will look different.
 

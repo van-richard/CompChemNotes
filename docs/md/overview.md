@@ -7,9 +7,19 @@ has_children: true
 
 # Overview
 
+To start running Amber executables, you need to `source` the following files.
+
+```
+source /path/to/compiler
+source /path/to/mpi
+source /path/to/amber.sh
+```
+
+*Note:* These will change depending on who did the installation or what system you're on.
+
 ## Prepare Amber Inputs with tleap (parm7, rst7)
 
-To start running simulations with Amber, you'll need to prepare 2 files, 1) `filename`.parm7, and 2) `filename`.rst7. 
+Running simulations with Amber, you'll need to prepare 2 files, 1) `filename`.parm7, and 2) `filename`.rst7. 
 
 ### `filename`.parm7
 
