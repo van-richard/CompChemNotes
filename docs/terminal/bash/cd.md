@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ls
+title: cd
 grand_parent: Terminal
 parent: BASH
 ---
