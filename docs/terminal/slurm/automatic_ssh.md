@@ -26,6 +26,6 @@ ssh <username>@schooner.oscer.ou.edu mkdir -p .ssh
 Append the public key to the cluser and enter password one last time:
 
 ```
-cat .ssh/id_rsa.pub | ssh <username>@schooner.oscer.ou.edu `cat >> ~/.ssh/authorized_keys`
+cat .ssh/id_rsa.pub | ssh <username>@schooner.oscer.ou.edu 'cat >> ~/.ssh/authorized_keys'
 ```
 <br />

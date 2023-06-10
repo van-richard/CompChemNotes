@@ -7,4 +7,43 @@ parent: Molecular Dynamics
 
 # Building Protien Systems in Explicit Solvent
 
-Modified tutorial from [Amber MD](https://ambermd.org/tutorials/basic/tutorial7/index.php).
+Modified tutorial from [Amber MD](https://ambermd.org/tutorials/basic/tutorial7/index.php) by Abigail Held and Maria Nagan.
+
+Follow everything up to section **IV. Use LEaP to Build a Protein System in Explicit Solvent**
+
+a. Set AMBERHOME
+
+To run an executable in Amber, you need set the AMBERHOME environment variable. This script will set up your shell environment for that:
+
+```
+source /home/van/.Programs/amber20/amber.sh
+```
+
+b. Prepare the following input file,`tleap.in`, for *tleap*
+
+```
+source leaprc.protein.ff19SB
+source leaprc.water.opc
+
+ramp=loadpdb RAMP1.pdb
+
+bond ramp.27.SG ramp.82.SG
+bond ramp.40.SG ramp.72.SG
+bond ramp.57.SG ramp.104.SG
+
+saveAmberParm ramp RAMP1_gas.prmtop RAMP1_gas.inpcrd
+
+addIons ramp Na+ 2
+
+solvateOct ramp OPCBOX 10.0
+
+addIonsRand ramp Na+ 19 Cl- 19
+
+saveamberparm ramp RAMP1_ion.prmtop RAMP1_ion.inpcrd
+```
+
+c. Run *tleap*
+
+```
+tleap -sf tleap.in
+```
