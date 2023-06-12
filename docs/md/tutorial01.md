@@ -5,7 +5,7 @@ parent: Molecular Dynamics
 # nav_order: 2
 ---
 
-# Building Protien Systems in Explicit Solvent
+# Building Protei in Systems in Explicit Solvent
 
 Modified tutorial from [Amber MD](https://ambermd.org/tutorials/basic/tutorial7/index.php) by Abigail Held and Maria Nagan.
 

@@ -1,22 +1,11 @@
 ---
 layout: default
-title: Tutorial 1 
+title: Tutorial 2 
 parent: Molecular Dynamics
 # nav_order: 2
 ---
 
-# Building Protien Systems in Explicit Solvent
+# Simple Simulation with Alanine Dipeptide
 
-Modified tutorial from [Amber MD](https://ambermd.org/tutorials/basic/tutorial7/index.php) by Abigail Held and Maria Nagan.
+Modified tutorial from [Amber MD](https://ambermd.org/tutorials/basic/tutorial0/index.php) by Benjamin D. Madej and Ross Walker.
 
-Follow everything up to section **IV. Use LEaP to Build a Protein System in Explicit Solvent**
-
-## A. Set AMBERHOME
-
-To run an executable in Amber, you need set the AMBERHOME environment variable. This script will set up your shell environment for that:
-
-```
-source /home/van/.Programs/amber20/amber.sh
-```
-
-## B. Prepare the following input file,`tleap.in`, for *tleap
