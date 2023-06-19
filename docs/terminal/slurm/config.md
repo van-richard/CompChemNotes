@@ -1,6 +1,6 @@
 ---
 layout: default
-title: config (Multiple SSH) 
+title: ssh config File 
 parent: SLURM
 grand_parent: Terminal
 ---

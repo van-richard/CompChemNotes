@@ -13,7 +13,7 @@ Similar to C/C++, Java, and PHP.
 printf -v VARIABLE FORMAT ARGUMENTS
 ```
 
-# Example
+## Example
 
 Add `1 + 1` as variable `j`.
 

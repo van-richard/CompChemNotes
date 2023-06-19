@@ -15,7 +15,7 @@ awk '{print $1}' file
 
 Where `$1` is the first column. Index starts at 1.
 
-# Separator
+## Separator
 
 You can chose the field separator with, `-F`. This example choses the comma as the separator, and print the 5th column:
 
@@ -23,10 +23,17 @@ You can chose the field separator with, `-F`. This example choses the comma as t
 awk -F ',' '{print $5} file'
 ```
 
-# Math
+## Math
 
-Average a column
+### Average a column
 
 ```
 awk '{ total += $2; count++ } END { print total/count }' file
 ```
+
+### Add to value in column
+
+```
+awk '{print $1 + 1}' file
+```
+

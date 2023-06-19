@@ -11,5 +11,5 @@ parent: BASH
 `mv` is also useful for renaming files!
 
 ```
-mv s0urc3.txt dst.txt
+mv source.txt new.txt
 ```

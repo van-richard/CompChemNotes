@@ -7,6 +7,8 @@ has_children: true
 
 # Overview
 
-Examples shown below references the OSCER Supercomputer at the University of Oklahoma. However, this similar commands can be used for other supercomputers with minor adjustments.
+SLURM is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters. 
+
+[More Information](https://slurm.schedmd.com/overview.html)
 
 NOTE: Change `<username>` with your supercomputing account name.

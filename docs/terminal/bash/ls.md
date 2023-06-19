@@ -5,7 +5,7 @@ grand_parent: Terminal
 parent: BASH
 ---
 
-# List information about files/folders 
+# ls - List information about files/folders 
 
 The default is to list the files in the current directory. Adding options can change how the list is organized.
 
@@ -13,31 +13,31 @@ The default is to list the files in the current directory. Adding options can ch
 ls [option] [directory]
 ```
 
-# List directories
+## List directories
 
 ```
 ls -d
 ```
 
-# Long list format 
+## Long list format 
 
 ```
 ls -l
 ```
 
-# Sort by time (newest first)
+## Sort by time (newest first)
 
 ```
 ls -t
 ```
 
-# List files with file size in kilobytes/megabytes/gigabytes
+## List files with file size in kilobytes/megabytes/gigabytes
 
 ```
 ls -h
 ```
 
-# Sort alphabetically
+## Sort alphabetically
 
 ```
 ls -X
